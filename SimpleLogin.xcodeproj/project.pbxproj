@@ -13,6 +13,13 @@
 		CC80510722CDEAAA009849B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC80510622CDEAAA009849B5 /* Assets.xcassets */; };
 		CC80510A22CDEAAA009849B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC80510822CDEAAA009849B5 /* LaunchScreen.storyboard */; };
 		CC80511522CDEAAA009849B5 /* SimpleLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80511422CDEAAA009849B5 /* SimpleLoginTests.swift */; };
+		CC8BEF3522CE182A007C7E79 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BEF3422CE182A007C7E79 /* LoginView.swift */; };
+		CC8BEF3722CE19CC007C7E79 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BEF3622CE19CC007C7E79 /* User.swift */; };
+		CCAA4F0522D22786004A8842 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA4F0422D22786004A8842 /* FeedViewController.swift */; };
+		CCAA4F0822D22FF7004A8842 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA4F0622D22FF7004A8842 /* ProfileTableViewCell.swift */; };
+		CCAA4F0922D22FF7004A8842 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAA4F0722D22FF7004A8842 /* ProfileTableViewCell.xib */; };
+		CCAA4F0E22D23C5F004A8842 /* ApiGetCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA4F0D22D23C5F004A8842 /* ApiGetCall.swift */; };
+		CCAA4F1022D23C9D004A8842 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA4F0F22D23C9D004A8842 /* ApiCall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		CC80511022CDEAAA009849B5 /* SimpleLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC80511422CDEAAA009849B5 /* SimpleLoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoginTests.swift; sourceTree = "<group>"; };
 		CC80511622CDEAAA009849B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8BEF3422CE182A007C7E79 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CC8BEF3622CE19CC007C7E79 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CCAA4F0422D22786004A8842 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		CCAA4F0622D22FF7004A8842 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		CCAA4F0722D22FF7004A8842 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		CCAA4F0D22D23C5F004A8842 /* ApiGetCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGetCall.swift; sourceTree = "<group>"; };
+		CCAA4F0F22D23C9D004A8842 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,9 @@
 		CC8050FE22CDEAA9009849B5 /* SimpleLogin */ = {
 			isa = PBXGroup;
 			children = (
+				CC8BEF3322CE1705007C7E79 /* Controller */,
+				CC8BEF3222CE16FD007C7E79 /* Model */,
+				CC8BEF3122CE16D5007C7E79 /* View */,
 				CC8050FF22CDEAA9009849B5 /* AppDelegate.swift */,
 				CC80510122CDEAA9009849B5 /* ViewController.swift */,
 				CC80510322CDEAA9009849B5 /* Main.storyboard */,
@@ -94,6 +111,58 @@
 				CC80511622CDEAAA009849B5 /* Info.plist */,
 			);
 			path = SimpleLoginTests;
+			sourceTree = "<group>";
+		};
+		CC8BEF3122CE16D5007C7E79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA4F0B22D2342C004A8842 /* Cells */,
+				CCAA4F0A22D2338A004A8842 /* FeedView */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CC8BEF3222CE16FD007C7E79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC8BEF3622CE19CC007C7E79 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC8BEF3322CE1705007C7E79 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA4F0C22D23C36004A8842 /* API */,
+				CC8BEF3422CE182A007C7E79 /* LoginView.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CCAA4F0A22D2338A004A8842 /* FeedView */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA4F0422D22786004A8842 /* FeedViewController.swift */,
+			);
+			path = FeedView;
+			sourceTree = "<group>";
+		};
+		CCAA4F0B22D2342C004A8842 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA4F0722D22FF7004A8842 /* ProfileTableViewCell.xib */,
+				CCAA4F0622D22FF7004A8842 /* ProfileTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		CCAA4F0C22D23C36004A8842 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA4F0D22D23C5F004A8842 /* ApiGetCall.swift */,
+				CCAA4F0F22D23C9D004A8842 /* ApiCall.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC80510A22CDEAAA009849B5 /* LaunchScreen.storyboard in Resources */,
+				CCAA4F0922D22FF7004A8842 /* ProfileTableViewCell.xib in Resources */,
 				CC80510722CDEAAA009849B5 /* Assets.xcassets in Resources */,
 				CC80510522CDEAA9009849B5 /* Main.storyboard in Resources */,
 			);
@@ -197,6 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCAA4F1022D23C9D004A8842 /* ApiCall.swift in Sources */,
+				CC8BEF3722CE19CC007C7E79 /* User.swift in Sources */,
+				CC8BEF3522CE182A007C7E79 /* LoginView.swift in Sources */,
+				CCAA4F0522D22786004A8842 /* FeedViewController.swift in Sources */,
+				CCAA4F0822D22FF7004A8842 /* ProfileTableViewCell.swift in Sources */,
+				CCAA4F0E22D23C5F004A8842 /* ApiGetCall.swift in Sources */,
 				CC80510222CDEAA9009849B5 /* ViewController.swift in Sources */,
 				CC80510022CDEAA9009849B5 /* AppDelegate.swift in Sources */,
 			);
