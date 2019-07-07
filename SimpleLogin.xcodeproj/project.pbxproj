@@ -118,6 +118,7 @@
 		CC8BEF3122CE16D5007C7E79 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCAA4F1322D272E3004A8842 /* LoginView */,
 				CCAA4F0B22D2342C004A8842 /* Cells */,
 				CCAA4F0A22D2338A004A8842 /* FeedView */,
 			);
@@ -136,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				CCAA4F0C22D23C36004A8842 /* API */,
-				CC8BEF3422CE182A007C7E79 /* LoginView.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -166,6 +166,14 @@
 				CCAA4F1122D26F42004A8842 /* ApiPostCall.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		CCAA4F1322D272E3004A8842 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				CC8BEF3422CE182A007C7E79 /* LoginView.swift */,
+			);
+			name = LoginView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

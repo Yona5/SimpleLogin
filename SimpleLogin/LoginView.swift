@@ -28,10 +28,15 @@ class LoginView: UIViewController {
             alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil));
             self.present(alert, animated: true);
         }else{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let feedView = storyBoard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
-            
-            self.present(feedView, animated:true, completion:nil)
+            let postCall = ApiPostCall();
+            postCall.makePostApiCall(URL: "https://reqres.in/api/login");
+            if(!(postCall.getToken()).isEmpty){
+                print("your screwed");
+            }else{
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let feedView = storyBoard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+                self.present(feedView, animated:true, completion:nil)
+            }
         }
     }
 
