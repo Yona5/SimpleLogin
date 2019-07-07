@@ -20,6 +20,7 @@
 		CCAA4F0922D22FF7004A8842 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAA4F0722D22FF7004A8842 /* ProfileTableViewCell.xib */; };
 		CCAA4F0E22D23C5F004A8842 /* ApiGetCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA4F0D22D23C5F004A8842 /* ApiGetCall.swift */; };
 		CCAA4F1022D23C9D004A8842 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA4F0F22D23C9D004A8842 /* ApiCall.swift */; };
+		CCAA4F1222D26F42004A8842 /* ApiPostCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA4F1122D26F42004A8842 /* ApiPostCall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		CCAA4F0722D22FF7004A8842 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		CCAA4F0D22D23C5F004A8842 /* ApiGetCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGetCall.swift; sourceTree = "<group>"; };
 		CCAA4F0F22D23C9D004A8842 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		CCAA4F1122D26F42004A8842 /* ApiPostCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPostCall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				CCAA4F0D22D23C5F004A8842 /* ApiGetCall.swift */,
 				CCAA4F0F22D23C9D004A8842 /* ApiCall.swift */,
+				CCAA4F1122D26F42004A8842 /* ApiPostCall.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				CCAA4F1022D23C9D004A8842 /* ApiCall.swift in Sources */,
 				CC8BEF3722CE19CC007C7E79 /* User.swift in Sources */,
 				CC8BEF3522CE182A007C7E79 /* LoginView.swift in Sources */,
+				CCAA4F1222D26F42004A8842 /* ApiPostCall.swift in Sources */,
 				CCAA4F0522D22786004A8842 /* FeedViewController.swift in Sources */,
 				CCAA4F0822D22FF7004A8842 /* ProfileTableViewCell.swift in Sources */,
 				CCAA4F0E22D23C5F004A8842 /* ApiGetCall.swift in Sources */,
