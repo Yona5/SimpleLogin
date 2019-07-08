@@ -17,8 +17,8 @@ class FeedViewController: UIViewController {
         feedTable.dataSource = self;
         let nib = UINib(nibName: "ProfileTableViewCell", bundle: nil);
         feedTable.register(nib, forCellReuseIdentifier: "ProfileIdentifier");
-        DispatchQueue.main.async {
-        }
+        feedTable.rowHeight = UITableView.automaticDimension;
+        makeApiCall();
     }
     
     func makeApiCall(){

@@ -19,27 +19,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="260.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9y6-Hg-LIn">
-                        <rect key="frame" x="161" y="25" width="159" height="77"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uF-0o-b1S">
-                        <rect key="frame" x="154" y="129" width="172" height="26"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uF-0o-b1S">
+                        <rect key="frame" x="154" y="132" width="172" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="172" id="hfK-1o-xiB"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5E-Lg-Bbp">
-                        <rect key="frame" x="190" y="170" width="101" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5E-Lg-Bbp">
+                        <rect key="frame" x="190" y="171" width="101" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="101" id="Nnl-yS-AkI"/>
+                            <constraint firstAttribute="height" constant="21" id="mWE-fB-a8t"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9y6-Hg-LIn">
+                        <rect key="frame" x="161" y="20" width="159" height="77"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="159" id="5bd-YO-Izq"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="9y6-Hg-LIn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="28b-9H-M7c"/>
-                    <constraint firstItem="9y6-Hg-LIn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="LhW-Ww-0Xg"/>
-                    <constraint firstItem="R5E-Lg-Bbp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="UYl-fT-q8s"/>
-                    <constraint firstItem="6uF-0o-b1S" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="maT-Io-8N9"/>
+                    <constraint firstItem="R5E-Lg-Bbp" firstAttribute="top" secondItem="6uF-0o-b1S" secondAttribute="bottom" constant="15" id="678-sD-cKb"/>
+                    <constraint firstItem="9y6-Hg-LIn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="8FU-J1-3P3"/>
+                    <constraint firstItem="6uF-0o-b1S" firstAttribute="top" secondItem="9y6-Hg-LIn" secondAttribute="bottom" constant="35" id="BQj-kI-lni"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="R5E-Lg-Bbp" secondAttribute="bottom" constant="24" id="KMK-e3-cdy"/>
+                    <constraint firstItem="6uF-0o-b1S" firstAttribute="centerX" secondItem="R5E-Lg-Bbp" secondAttribute="centerX" id="OHk-wp-w70"/>
+                    <constraint firstItem="9y6-Hg-LIn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-35" id="YmI-0U-1Ne"/>
+                    <constraint firstItem="9y6-Hg-LIn" firstAttribute="centerX" secondItem="6uF-0o-b1S" secondAttribute="centerX" id="xAf-QN-3r7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

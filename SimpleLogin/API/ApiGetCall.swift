@@ -20,7 +20,6 @@ class ApiGetCall: ApiCall{
                     return User.init(ID: adata["id"] as! Int, Email: adata["email"] as! String, Fname: adata["first_name"] as! String, Lname: adata["last_name"] as! String, Avatar: adata["avatar"] as! String)
                 })
                 success(user)
-                //print(d)
             }
         }
     }
