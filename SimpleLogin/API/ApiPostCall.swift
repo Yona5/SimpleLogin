@@ -9,18 +9,15 @@
 import Foundation
 
 class ApiPostCall: ApiCall{
-    var token: String = "";
-    func makePostApiCall(URL url: String){
+    var _token: String = "";
+    func makePostApiCall(URL url: String, token: @escaping (_ token: String)->()){
         makeApiCall(URL: url, Method: "POST") { (data, response, error) in
             if let error = error{
                 print(error)
             }else if let data = data as? [String:AnyObject]{
-                let token = data["token"] as! String;
-                self.token = token;
+                self._token = data["token"] as! String;
+                token(self._token);
             }
         }
-    }
-    func getToken() -> String{
-        return self.token;
     }
 }

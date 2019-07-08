@@ -29,13 +29,16 @@ class LoginView: UIViewController {
             self.present(alert, animated: true);
         }else{
             let postCall = ApiPostCall();
-            postCall.makePostApiCall(URL: "https://reqres.in/api/login");
-            if(!(postCall.getToken()).isEmpty){
-                print("your screwed");
-            }else{
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let feedView = storyBoard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
-                self.present(feedView, animated:true, completion:nil)
+            postCall.makePostApiCall(URL: "https://reqres.in/api/login") { (token) in
+                if(token.isEmpty){
+                    print("No token");
+                }else{
+                    DispatchQueue.main.async {
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        let feedView = storyBoard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+                        self.present(feedView, animated:true, completion:nil);
+                    }
+                }
             }
         }
     }
