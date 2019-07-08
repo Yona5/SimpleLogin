@@ -12,9 +12,12 @@ class LoginView: UIViewController {
 
     @IBOutlet weak var _password: UITextField!
     @IBOutlet weak var _email: UITextField!
+    @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loginIndicator.alpha = 0;
 //        _password.layer.cornerRadius = 30;
 //        _password.clipsToBounds = false;
     }
@@ -22,7 +25,8 @@ class LoginView: UIViewController {
     @IBAction func LoginBtn(_ sender: Any) {
         let password = _password.text!;
         let email = _email.text!;
-        
+        self.loginIndicator.alpha = 1;
+        self.loginIndicator.startAnimating();
         if(password.isEmpty || email.isEmpty){
             let alert = UIAlertController(title: "Empty", message: "Enter email and password", preferredStyle: .alert);
             alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil));
@@ -37,10 +41,11 @@ class LoginView: UIViewController {
                         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                         let feedView = storyBoard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
                         self.present(feedView, animated:true, completion:nil);
+                        self.loginIndicator.stopAnimating();
+                        self.loginIndicator.alpha = 0;
                     }
                 }
             }
         }
     }
-
 }

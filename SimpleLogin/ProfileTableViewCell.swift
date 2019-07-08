@@ -33,14 +33,18 @@ class ProfileTableViewCell: UITableViewCell {
         }
         self._name.text =  user.fname! + " " + user.lname!;
         self._email.text = user.email ?? "No lName";
-
-        if let url = URL(string: user.avatar!){
-            do{
-                let data = try Data(contentsOf: url);
-                self._avatar.image = UIImage(data: data);
-            }catch let error{
-                print(error.localizedDescription);
+        DispatchQueue.global().async {
+            if let url = URL(string: user.avatar!){
+                do{
+                    let data = try Data(contentsOf: url);
+                    DispatchQueue.main.async {
+                        self._avatar.image = UIImage(data: data);
+                    }
+                }catch let error{
+                    print(error.localizedDescription);
+                }
             }
         }
+       
     }
 }
