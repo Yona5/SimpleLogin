@@ -19,13 +19,11 @@ class LoginView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginIndicator.alpha = 0;
-        _password.layer.cornerRadius = 23.0
-        _password.layer.borderWidth = 1.0
         _email.layer.cornerRadius = 23.0
         _email.layer.borderWidth = 1.0
+        _password.layer.cornerRadius = 23.0
+        _password.layer.borderWidth = 1.0
         _loginBtn.layer.cornerRadius = 23.0
-//        _loginBtn.layer.borderWidth = 1.0
-//        _password.layer.borderColor = UIColor.red.cgColor
     }
     
     @IBAction func LoginBtn(_ sender: Any) {
@@ -56,14 +54,3 @@ class LoginView: UIViewController {
     }
 }
 
-extension UIView {
-    @IBInspectable
-    var cornerRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        }
-        set {
-            layer.cornerRadius = newValue
-        }
-    }
-}
