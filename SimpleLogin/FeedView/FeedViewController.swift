@@ -10,6 +10,7 @@ import UIKit
 
 class FeedViewController: UIViewController {
 
+    @IBOutlet weak var feedIndicator: UIActivityIndicatorView!
     @IBOutlet weak var feedTable: UITableView!
     var users : [User] = [];
     override func viewDidLoad() {
@@ -18,6 +19,8 @@ class FeedViewController: UIViewController {
         let nib = UINib(nibName: "ProfileTableViewCell", bundle: nil);
         feedTable.register(nib, forCellReuseIdentifier: "ProfileIdentifier");
         feedTable.rowHeight = UITableView.automaticDimension;
+        self.feedIndicator.alpha = 1;
+        self.feedIndicator.startAnimating();
         makeApiCall();
     }
     
@@ -27,6 +30,8 @@ class FeedViewController: UIViewController {
             self.users = users;
             DispatchQueue.main.async {
                 self.feedTable.reloadData();
+                self.feedIndicator.stopAnimating();
+                self.feedIndicator.alpha = 0;
             }
         }) { (error) in
             print(error.localizedDescription);

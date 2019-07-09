@@ -7,15 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
 class User{
     var id: Int?;
     var email: String?;
     var fname: String?;
     var lname: String?;
-    var avatar: String?;
+    var avatar: UIImage?;
     
-    init(ID id: Int, Email email: String, Fname fname: String, Lname lname: String, Avatar avatar: String) {
+    init(ID id: Int, Email email: String, Fname fname: String, Lname lname: String, Avatar avatar: UIImage) {
         self.id = id;
         self.email = email;
         self.fname = fname;

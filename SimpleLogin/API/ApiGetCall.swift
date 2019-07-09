@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ApiGetCall: ApiCall{
     
@@ -17,7 +18,10 @@ class ApiGetCall: ApiCall{
             }else if let data = data as? [String:AnyObject]{
                 let d = data["data"] as! [[String: AnyObject]]
                 let user = d.map({ (adata) -> User in
-                    return User.init(ID: adata["id"] as! Int, Email: adata["email"] as! String, Fname: adata["first_name"] as! String, Lname: adata["last_name"] as! String, Avatar: adata["avatar"] as! String)
+                    let imageURL = URL(string: adata["avatar"] as! String)!;
+                    let data = try? Data(contentsOf: imageURL);
+                    let image = UIImage(data: data!);
+                    return User.init(ID: adata["id"] as! Int, Email: adata["email"] as! String, Fname: adata["first_name"] as! String, Lname: adata["last_name"] as! String, Avatar: image!)
                 })
                 success(user)
             }

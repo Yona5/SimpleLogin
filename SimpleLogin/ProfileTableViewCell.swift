@@ -13,7 +13,7 @@ class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var _avatar: UIImageView!
     @IBOutlet weak var _name: UILabel!
     @IBOutlet weak var _email: UILabel!
-    
+
     var user :User?{
         didSet{
             updateUser()
@@ -32,21 +32,6 @@ class ProfileTableViewCell: UITableViewCell {
         guard let user = user else { return }
         self._name.text =  user.fname! + " " + user.lname!;
         self._email.text = user.email ?? "No lName";
-        //fetch the image in the background async
-        DispatchQueue.global().async {
-            if let url = URL(string: user.avatar!){
-                do{
-                    let data = try Data(contentsOf: url);
-                    DispatchQueue.main.async {
-                        self._avatar.image = UIImage(data: data);
-//                        self.user = user;
-                        print("the user is ", user.fname!);
-                    }
-                }catch let error{
-                    print(error.localizedDescription);
-                }
-            }
-        }
-       
+        self._avatar.image = user.avatar;
     }
 }
