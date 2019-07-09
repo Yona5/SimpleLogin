@@ -35,12 +35,13 @@ class FeedViewController: UIViewController {
 }
 
 extension FeedViewController: UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.feedTable.dequeueReusableCell(withIdentifier: "ProfileIdentifier", for: indexPath) as! ProfileTableViewCell;
+        let cell = feedTable.dequeueReusableCell(withIdentifier: "ProfileIdentifier", for: indexPath) as! ProfileTableViewCell;
         let user = self.users[indexPath.row];
         cell.user = user;
         return cell;
